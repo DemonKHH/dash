@@ -46,7 +46,7 @@ struct AccountView: View {
 
                 links
 
-                Positions
+//                Positions
 
                 Button{
                     isLogged = false

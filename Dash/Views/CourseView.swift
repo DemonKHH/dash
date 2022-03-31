@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CourseView: View {
     var namespace: Namespace.ID
-    var course: Course = courses[0]
+    var course: Position = PositionModel().positions[0]
     @Binding var show: Bool
     @State var appear = [false, false, false]
     @EnvironmentObject var model : Model
@@ -71,23 +71,23 @@ struct CourseView: View {
                 .frame(height: scrollY > 0 ? 500 + scrollY : 500)
 
                 .foregroundColor(.black)
-                .background(
-                    Image(course.image)
-                        .resizable().aspectRatio(contentMode: .fit)
-                        .padding(20)
-                        .frame(maxWidth:500)
-                        .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
-                        .offset(y: scrollY > 0 ? scrollY * -0.8 : 0)
-                )
-                .background(
-                    Image(course.background)
-                        .resizable().aspectRatio(contentMode: .fill).matchedGeometryEffect(id: "background\(course.id)", in: namespace)
-                        .offset(y: scrollY > 0 ? -scrollY : 0)
-                        .scaleEffect(scrollY > 0 ? scrollY / 1000 + 1 : 1)
-                        .blur(radius: scrollY / 10)
-                )
+//                .background(
+//                    Image(course.image)
+//                        .resizable().aspectRatio(contentMode: .fit)
+//                        .padding(20)
+//                        .frame(maxWidth:500)
+//                        .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
+//                        .offset(y: scrollY > 0 ? scrollY * -0.8 : 0)
+//                )
+//                .background(
+//                    Image(course.background)
+//                        .resizable().aspectRatio(contentMode: .fill).matchedGeometryEffect(id: "background\(course.id)", in: namespace)
+//                        .offset(y: scrollY > 0 ? -scrollY : 0)
+//                        .scaleEffect(scrollY > 0 ? scrollY / 1000 + 1 : 1)
+//                        .blur(radius: scrollY / 10)
+//                )
                 .mask(RoundedRectangle(cornerRadius: appear[0] ? 0 : 30, style: .continuous)
-                        .matchedGeometryEffect(id: "mask\(course.id)", in: namespace)
+                        .matchedGeometryEffect(id: "mask\(course.instId)", in: namespace)
                         .offset(y: scrollY > 0 ? -scrollY : 0)
                 )
                 .overlay(
@@ -139,15 +139,15 @@ struct CourseView: View {
         VStack(alignment: .leading, spacing: 12){
 
 
-        Text(course.title)
+        Text(course.instId)
             .font(.largeTitle.weight(.bold))
-            .matchedGeometryEffect(id: "title\(course.id)", in: namespace)
+            .matchedGeometryEffect(id: "title\(course.instId)", in: namespace)
             .frame(maxWidth:.infinity, alignment:  .leading)
-            Text(course.subtitle.uppercased()).font(.footnote.weight(.semibold))
-                .matchedGeometryEffect(id: "subtitle\(course.id)", in: namespace)
-            Text(course.text)
+            Text(course.upl.uppercased()).font(.footnote.weight(.semibold))
+                .matchedGeometryEffect(id: "subtitle\(course.upl)", in: namespace)
+            Text(course.uplRatio)
                 .font(.footnote)
-                .matchedGeometryEffect(id: "text\(course.id)", in: namespace)
+                .matchedGeometryEffect(id: "text\(course.uplRatio)", in: namespace)
             Divider()
                 .opacity(appear[0] ? 1 : 0)
             HStack{
@@ -167,7 +167,7 @@ struct CourseView: View {
             .background(
                 Rectangle().fill(.ultraThinMaterial)
                     .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .matchedGeometryEffect(id: "blur\(course.id)", in: namespace))
+                    .matchedGeometryEffect(id: "blur\(course.instId)", in: namespace))
             .offset(y:250)
             .padding(20)
     }

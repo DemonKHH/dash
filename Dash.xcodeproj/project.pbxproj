@@ -36,6 +36,13 @@
 		DB254EA527D9E46F00398AF9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB254EA427D9E46F00398AF9 /* Model.swift */; };
 		DB254EA727DB1F8F00398AF9 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB254EA627DB1F8F00398AF9 /* Suggestion.swift */; };
 		DBBE6F4627F47D60009BF020 /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6F4527F47D60009BF020 /* Positions.swift */; };
+		DBBE6F4E27F5A6BA009BF020 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBE6F4D27F5A6BA009BF020 /* WidgetKit.framework */; };
+		DBBE6F5027F5A6BA009BF020 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBE6F4F27F5A6BA009BF020 /* SwiftUI.framework */; };
+		DBBE6F5327F5A6BA009BF020 /* DashWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6F5227F5A6BA009BF020 /* DashWidgets.swift */; };
+		DBBE6F5627F5A6BC009BF020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBE6F5527F5A6BC009BF020 /* Assets.xcassets */; };
+		DBBE6F5827F5A6BC009BF020 /* DashWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6F5427F5A6BA009BF020 /* DashWidgets.intentdefinition */; };
+		DBBE6F5927F5A6BC009BF020 /* DashWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DBBE6F5427F5A6BA009BF020 /* DashWidgets.intentdefinition */; };
+		DBBE6F5C27F5A6BC009BF020 /* DashWidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBE6F4B27F5A6BA009BF020 /* DashWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBE1C45127DB31AE00C111F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45027DB31AE00C111F4 /* SignUpView.swift */; };
 		DBE1C45527DB371100C111F4 /* AngularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45427DB371100C111F4 /* AngularButtonStyle.swift */; };
 		DBE1C45727DB433100C111F4 /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45627DB433100C111F4 /* InputStyle.swift */; };
@@ -59,7 +66,28 @@
 			remoteGlobalIDString = DB254E5F27D5E4B500398AF9;
 			remoteInfo = Dash;
 		};
+		DBBE6F5A27F5A6BC009BF020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB254E5827D5E4B500398AF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBBE6F4A27F5A6BA009BF020;
+			remoteInfo = DashWidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBBE6F6027F5A6BD009BF020 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBBE6F5C27F5A6BC009BF020 /* DashWidgetsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F1C547027D8D7530008DE67 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
@@ -94,6 +122,13 @@
 		DB254EA427D9E46F00398AF9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DB254EA627DB1F8F00398AF9 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		DBBE6F4527F47D60009BF020 /* Positions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
+		DBBE6F4B27F5A6BA009BF020 /* DashWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DashWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBE6F4D27F5A6BA009BF020 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DBBE6F4F27F5A6BA009BF020 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DBBE6F5227F5A6BA009BF020 /* DashWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashWidgets.swift; sourceTree = "<group>"; };
+		DBBE6F5427F5A6BA009BF020 /* DashWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DashWidgets.intentdefinition; sourceTree = "<group>"; };
+		DBBE6F5527F5A6BC009BF020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBBE6F5727F5A6BC009BF020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBE1C45027DB31AE00C111F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DBE1C45427DB371100C111F4 /* AngularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularButtonStyle.swift; sourceTree = "<group>"; };
 		DBE1C45627DB433100C111F4 /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
@@ -124,6 +159,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBBE6F4827F5A6BA009BF020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBE6F5027F5A6BA009BF020 /* SwiftUI.framework in Frameworks */,
+				DBBE6F4E27F5A6BA009BF020 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +187,8 @@
 				DB254E6227D5E4B500398AF9 /* Dash */,
 				DB254E7327D5E4B700398AF9 /* DashTests */,
 				DB254E7D27D5E4B700398AF9 /* DashUITests */,
+				DBBE6F5127F5A6BA009BF020 /* DashWidgets */,
+				DBBE6F4C27F5A6BA009BF020 /* Frameworks */,
 				DB254E6127D5E4B500398AF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +199,7 @@
 				DB254E6027D5E4B500398AF9 /* Dash.app */,
 				DB254E7027D5E4B700398AF9 /* DashTests.xctest */,
 				DB254E7A27D5E4B700398AF9 /* DashUITests.xctest */,
+				DBBE6F4B27F5A6BA009BF020 /* DashWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +314,26 @@
 			path = Okex;
 			sourceTree = "<group>";
 		};
+		DBBE6F4C27F5A6BA009BF020 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE6F4D27F5A6BA009BF020 /* WidgetKit.framework */,
+				DBBE6F4F27F5A6BA009BF020 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBBE6F5127F5A6BA009BF020 /* DashWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE6F5227F5A6BA009BF020 /* DashWidgets.swift */,
+				DBBE6F5427F5A6BA009BF020 /* DashWidgets.intentdefinition */,
+				DBBE6F5527F5A6BC009BF020 /* Assets.xcassets */,
+				DBBE6F5727F5A6BC009BF020 /* Info.plist */,
+			);
+			path = DashWidgets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,10 +344,12 @@
 				DB254E5C27D5E4B500398AF9 /* Sources */,
 				DB254E5D27D5E4B500398AF9 /* Frameworks */,
 				DB254E5E27D5E4B500398AF9 /* Resources */,
+				DBBE6F6027F5A6BD009BF020 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBBE6F5B27F5A6BC009BF020 /* PBXTargetDependency */,
 			);
 			name = Dash;
 			productName = Dash;
@@ -323,6 +392,23 @@
 			productReference = DB254E7A27D5E4B700398AF9 /* DashUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DBBE6F4A27F5A6BA009BF020 /* DashWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBBE6F5D27F5A6BD009BF020 /* Build configuration list for PBXNativeTarget "DashWidgetsExtension" */;
+			buildPhases = (
+				DBBE6F4727F5A6BA009BF020 /* Sources */,
+				DBBE6F4827F5A6BA009BF020 /* Frameworks */,
+				DBBE6F4927F5A6BA009BF020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DashWidgetsExtension;
+			productName = DashWidgetsExtension;
+			productReference = DBBE6F4B27F5A6BA009BF020 /* DashWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,7 +416,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					DB254E5F27D5E4B500398AF9 = {
@@ -343,6 +429,9 @@
 					DB254E7927D5E4B700398AF9 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = DB254E5F27D5E4B500398AF9;
+					};
+					DBBE6F4A27F5A6BA009BF020 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -362,6 +451,7 @@
 				DB254E5F27D5E4B500398AF9 /* Dash */,
 				DB254E6F27D5E4B700398AF9 /* DashTests */,
 				DB254E7927D5E4B700398AF9 /* DashUITests */,
+				DBBE6F4A27F5A6BA009BF020 /* DashWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +480,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBBE6F4927F5A6BA009BF020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBE6F5627F5A6BC009BF020 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -402,6 +500,7 @@
 				DB254E8E27D5FD9D00398AF9 /* Styles.swift in Sources */,
 				8F1C547327D8D9380008DE67 /* CourseView.swift in Sources */,
 				DB1D00A727D730C20002CC65 /* HexagonView.swift in Sources */,
+				DBBE6F5927F5A6BC009BF020 /* DashWidgets.intentdefinition in Sources */,
 				DB254EA727DB1F8F00398AF9 /* Suggestion.swift in Sources */,
 				DBE1C45B27E091BC00C111F4 /* Address.swift in Sources */,
 				DB1D00A527D6F0CB0002CC65 /* AccountView.swift in Sources */,
@@ -447,6 +546,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBBE6F4727F5A6BA009BF020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBE6F5827F5A6BC009BF020 /* DashWidgets.intentdefinition in Sources */,
+				DBBE6F5327F5A6BA009BF020 /* DashWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -459,6 +567,11 @@
 			isa = PBXTargetDependency;
 			target = DB254E5F27D5E4B500398AF9 /* Dash */;
 			targetProxy = DB254E7B27D5E4B700398AF9 /* PBXContainerItemProxy */;
+		};
+		DBBE6F5B27F5A6BC009BF020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBBE6F4A27F5A6BA009BF020 /* DashWidgetsExtension */;
+			targetProxy = DBBE6F5A27F5A6BC009BF020 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,6 +695,7 @@
 		DB254E8527D5E4B700398AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +725,7 @@
 		DB254E8627D5E4B700398AF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -733,6 +848,62 @@
 			};
 			name = Release;
 		};
+		DBBE6F5E27F5A6BD009BF020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DashWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DashWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.cc.DashWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBBE6F5F27F5A6BD009BF020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DashWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DashWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.cc.DashWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +939,15 @@
 			buildConfigurations = (
 				DB254E8B27D5E4B700398AF9 /* Debug */,
 				DB254E8C27D5E4B700398AF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBBE6F5D27F5A6BD009BF020 /* Build configuration list for PBXNativeTarget "DashWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBE6F5E27F5A6BD009BF020 /* Debug */,
+				DBBE6F5F27F5A6BD009BF020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

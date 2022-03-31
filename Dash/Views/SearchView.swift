@@ -50,7 +50,7 @@ struct SearchView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button{presentationMode.wrappedValue.dismiss()} label: {Text("Done").bold()})
             .sheet(isPresented: $show){
-                CourseView(namespace: namespace,course: courses[selectIndex], show: $show)
+                CourseView(namespace: namespace,course: PositionModel().positions[selectIndex], show: $show)
             }
         }
     }
