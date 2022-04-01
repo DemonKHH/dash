@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct NavigationBar: View {
     var title = ""
     @Binding var hasScrolled: Bool
@@ -19,7 +20,7 @@ struct NavigationBar: View {
         ZStack
         {
             Color.clear
-                .background(.ultraThinMaterial)
+//                .background(.ultraThinMaterial)
                 .blur(radius: 10)
                 .opacity(hasScrolled ? 1 : 0)
             Text(title)
@@ -36,13 +37,12 @@ struct NavigationBar: View {
                         .font(.body.weight(.bold))
                         .frame(width: 36, height: 36)
                         .foregroundColor(.secondary)
-                        .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 14, style: .continuous))
+                        .background(Color.blue)
                     .strokeStyle(cornerRadius:14)
                 }
                 .sheet(isPresented: $showSearch){
                     SearchView()
                 }
-
                 Button {
                     if isLogged {
                         showAccount = true
@@ -60,7 +60,7 @@ struct NavigationBar: View {
                 }
                 .sheet(isPresented: $showAccount)
                 {
-                    AccountView()
+//                    AccountView()
                 }
             }
             .frame(maxWidth:.infinity, alignment: .trailing)

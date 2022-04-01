@@ -18,18 +18,15 @@ struct HomeView: View {
     @EnvironmentObject var model:Model
     @AppStorage("isLiteMode") var isLiteMode = true
     @ObservedObject var positionModel = PositionModel()
-
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
 
             ScrollView {
-                scrollDetection
-
                 featured
-
                 Text("持仓信息".uppercased())
-                    .font(.footnote.weight(.semibold))
+                    .font(.title3)
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment:  .leading)
                     .padding(.horizontal ,20)
@@ -54,24 +51,6 @@ struct HomeView: View {
 
             }
             .coordinateSpace(name: "scroll")
-            .task {
-                await positionModel.fetchPositions()
-            }
-            .refreshable {
-                await positionModel.fetchPositions()
-            }
-
-
-            .safeAreaInset(edge: .top, content: {
-                Color.clear.frame(height: 70)
-            })
-            .overlay(
-                NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
-
-        )
-            if show {
-             detail
-            }
         }
         .statusBar(hidden: !showStatusBar)
         .onChange(of: show){ newValue in
@@ -139,9 +118,9 @@ struct HomeView: View {
         .tabViewStyle(.page(indexDisplayMode:.never))
         .frame(height:430)
         .background(Image("Blob 1").offset(x: 250, y: -100) )
-        .sheet(isPresented: $showCourse){
-            CourseView(namespace: namespace, course:positionModel.positions[selectedIndex], show: $showCourse)
-        }
+//        .sheet(isPresented: $showCourse){
+//            CourseView(namespace: namespace, course:positionModel.positions[selectedIndex], show: $showCourse)
+//        }
     }
 
     var cards: some View{
@@ -151,10 +130,10 @@ struct HomeView: View {
                 .onTapGesture {
                     withAnimation(.openCard)
                     {
-                        show.toggle()
-                        model.showDetail.toggle()
-                        showStatusBar = false
-                        selectdID = position.instId
+//                        show.toggle()
+//                        model.showDetail.toggle()
+//                        showStatusBar = false
+//                        selectdID = position.instId
                     }
             }
         }

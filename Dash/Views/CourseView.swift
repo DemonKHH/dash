@@ -38,8 +38,8 @@ struct CourseView: View {
             .mask(RoundedRectangle(cornerRadius: viewState.width / 3, style: .continuous))
             .shadow(color: .black.opacity(0.3), radius: 30, x: 0, y: 10)
             .scaleEffect(viewState.width / -500 + 1)
-            .background(.black.opacity(viewState.width / 500))
-            .background(.ultraThinMaterial)
+//            .background(.black.opacity(viewState.width / 500))
+//            .background(.ultraThinMaterial)
             .gesture(isDraggable ? drag : nil)
             .ignoresSafeArea()
 
@@ -71,21 +71,7 @@ struct CourseView: View {
                 .frame(height: scrollY > 0 ? 500 + scrollY : 500)
 
                 .foregroundColor(.black)
-//                .background(
-//                    Image(course.image)
-//                        .resizable().aspectRatio(contentMode: .fit)
-//                        .padding(20)
-//                        .frame(maxWidth:500)
-//                        .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
-//                        .offset(y: scrollY > 0 ? scrollY * -0.8 : 0)
-//                )
-//                .background(
-//                    Image(course.background)
-//                        .resizable().aspectRatio(contentMode: .fill).matchedGeometryEffect(id: "background\(course.id)", in: namespace)
-//                        .offset(y: scrollY > 0 ? -scrollY : 0)
-//                        .scaleEffect(scrollY > 0 ? scrollY / 1000 + 1 : 1)
-//                        .blur(radius: scrollY / 10)
-//                )
+
                 .mask(RoundedRectangle(cornerRadius: appear[0] ? 0 : 30, style: .continuous)
                         .matchedGeometryEffect(id: "mask\(course.instId)", in: namespace)
                         .offset(y: scrollY > 0 ? -scrollY : 0)
@@ -128,7 +114,7 @@ struct CourseView: View {
                 .font(.body.weight(.bold))
                 .foregroundColor(.secondary)
                 .padding(8)
-                .background(.ultraThinMaterial, in: Circle())
+//                .background(.ultraThinMaterial, in: Circle())
         }
         .frame(maxWidth: .infinity , maxHeight: .infinity, alignment: .topTrailing)
         .padding(20)
@@ -156,7 +142,7 @@ struct CourseView: View {
                     .frame(width: 26, height: 26)
                     .cornerRadius(10)
                     .padding(8)
-                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 18, style: .continuous))
+//                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 18, style: .continuous))
                 .strokeStyle(cornerRadius:18)
                 Text("Taught by Meng To")
                     .font(.footnote)
@@ -164,10 +150,10 @@ struct CourseView: View {
             .opacity(appear[1] ? 1 : 0)
     }
             .padding(20)
-            .background(
-                Rectangle().fill(.ultraThinMaterial)
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .matchedGeometryEffect(id: "blur\(course.instId)", in: namespace))
+//            .background(
+//                Rectangle().fill(.ultraThinMaterial)
+//                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+//                    .matchedGeometryEffect(id: "blur\(course.instId)", in: namespace))
             .offset(y:250)
             .padding(20)
     }

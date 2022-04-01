@@ -2,15 +2,16 @@
 //  CourseItem.swift
 //  Dash
 //
-//  Created by 流年划过颜夕 on 2022/3/9.
+//
 //
 
 import SwiftUI
 
+
 struct CourseItem: View {
     var namespace: Namespace.ID
     @Binding var show: Bool
-    var course: Position 
+    var course: Position
 
     var body: some View {
         VStack {
@@ -19,46 +20,41 @@ struct CourseItem: View {
             {
                 Text("产品：\(course.instId)")
                     .font(.title3)
-                    .matchedGeometryEffect(id: "title\(course.instId)", in: namespace)
+//                    .matchedGeometryEffect(id: "title\(course.instId)", in: namespace)
                 .frame(maxWidth:.infinity, alignment:  .leading)
-                Text("收益：\(course.upl)")
+                Text("收益：\(String(format: "%.2f", Float64(course.upl) ?? 0/1000))")
                     .font(.title3)
-                    .matchedGeometryEffect(id: "subtitle\(course.upl)", in: namespace)
+//                    .matchedGeometryEffect(id: "text\(course.upl)", in: namespace)
                 Text("收益率：\(Float64(course.uplRatio) ?? 0 * 100)%")
                     .font(.title3)
-                    .matchedGeometryEffect(id: "text\(course.uplRatio)", in: namespace)
+//                    .matchedGeometryEffect(id: "text\(course.uplRatio)", in: namespace)
+                Text("开仓均价：\(course.avgPx)")
+                    .font(.title3)
+//                    .matchedGeometryEffect(id: "text\(course.avgPx)", in: namespace)
+                Text("预估强行平价：\(course.liqPx)")
+                    .font(.title3)
+//                    .matchedGeometryEffect(id: "text\(course.liqPx)", in: namespace)
                 Text("持仓量：\(Float64(course.pos) ?? 0 * 10)")
                     .font(.title3)
-                    .matchedGeometryEffect(id: "subtitle\(course.pos)", in: namespace)
-                Text("保证金余额：\(course.margin)")
+//                    .matchedGeometryEffect(id: "text\(course.pos)", in: namespace)
+                Text("保证金余额：\(String(format: "%.2f", Float(course.margin) ?? 0/1000))")
                     .font(.title3)
-                    .matchedGeometryEffect(id: "text\(course.margin)", in: namespace)
+//                    .matchedGeometryEffect(id: "text\(course.margin)", in: namespace)
+                Text("保证金率：\(String(format: "%.2f", Float(course.mgnRatio) ?? 0/1000))")
+                    .font(.title3)
+//                    .matchedGeometryEffect(id: "text\(course.mgnRatio)", in: namespace)
             }
             .padding(20)
-            .background(
-                Rectangle().fill(.ultraThinMaterial)
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .blur(radius: 30)
-                    .matchedGeometryEffect(id: "blur\(course.instId)", in: namespace))
-
         }
 
-        .foregroundColor(.white)
-        .background(
-            Image(courses[0].image)
-                .resizable().aspectRatio(contentMode: .fit)
-                .padding(20)
-                .matchedGeometryEffect(id: "image\(course.instId)", in: namespace)
-        )
-        .background(
-            Image(courses[0].background)
-                .resizable().aspectRatio(contentMode: .fill).matchedGeometryEffect(id: "background\(course.instId)", in: namespace)
-        )                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
-                                .matchedGeometryEffect(id: "mask\(course.instId)", in: namespace))
+        .foregroundColor(.black)
+        .background(Color(red: 236, green: 240, blue: 241))
+        .cornerRadius(15) 
         .frame(height:300)
         .padding(20)
     }
 }
+
 
 struct CourseItem_Previews: PreviewProvider {
     @Namespace static var namespace

@@ -22,11 +22,11 @@ struct SearchView: View {
                     content
                 }
                 .padding(20)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .background(Color.blue)
                 .strokeStyle(cornerRadius: 30)
                 .padding (20)
                 .background(Rectangle()
-                                .fill(.regularMaterial)
+                                .fill(.green)
                                 .frame(height: 200)
                                 .frame(maxHeight: .infinity ,alignment:  . top)
                                 .blur(radius: 20)
@@ -35,17 +35,17 @@ struct SearchView: View {
                 .background(
                     Image("Blob 1").offset(x: -100, y: -200))
             }
-            .searchable(text:  $text, placement: .navigationBarDrawer(displayMode: .always),prompt: Text("SwiftUI,React, UI Design")){
-                ForEach(suggestions){
-                    suggestion in
-                    Button {
-                        text = (suggestion.text)
-                    } label: {
-                        Text(suggestion.text)
-                            .searchCompletion(suggestion.text)
-                    }
-                }
-            }
+//            .searchable(text:  $text, placement: .navigationBarDrawer(displayMode: .always),prompt: Text("SwiftUI,React, UI Design")){
+//                ForEach(suggestions){
+//                    suggestion in
+//                    Button {
+//                        text = (suggestion.text)
+//                    } label: {
+//                        Text(suggestion.text)
+//                            .searchCompletion(suggestion.text)
+//                    }
+//                }
+//            }
             .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button{presentationMode.wrappedValue.dismiss()} label: {Text("Done").bold()})
@@ -85,7 +85,7 @@ struct SearchView: View {
                     }
 
                     .padding(.vertical,4)
-                .listRowSeparator(.hidden)
+//                .listRowSeparator(.hidden)
             }
             }
 

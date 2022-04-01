@@ -45,17 +45,34 @@ class PositionModel: ObservableObject {
         code: 0,
         data: []
     )
-
-    @MainActor
-    func fetchPositions() async{
-        do {
+    
+    init() {
+        print("model init")
+        fetchPositions()
+    }
+    func fetchPositions() {
+            // https://img.umcoder.com/api/v5/account/positions
             let url = URL(string:
                             "https://img.umcoder.com/api/v5/account/positions")!
-            let (data, _) = try await URLSession.shared.data(from: url)
-            positionRsp = try JSONDecoder().decode(PositionRsp.self, from: data)
-            positions = positionRsp.data
-        }catch{
-            print("error")
-        }
+            // 创建一个会话，这个会话可以复用
+            let session = URLSession(configuration: .default)
+            let UrlRequest = URLRequest(url: url)
+            // 创建一个网络任务
+            let task = session.dataTask(with: UrlRequest) {(data, response, error) in
+                do {
+                    // 返回的是一个json，将返回的json转成字典r
+//                    let r = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
+                    print("解析内容")
+                    let r = try JSONDecoder().decode(PositionRsp.self, from: data!)
+                    print(r.data)
+                    self.positions = r.data
+                } catch {
+                    // 如果连接失败就...
+                    print("无法连接到服务器")
+                    return
+                }
+            }
+            // 运行此任务
+            task.resume()
     }
 }
