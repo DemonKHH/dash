@@ -19,29 +19,28 @@ struct CourseItem: View {
             VStack(alignment: .leading, spacing: 12)
             {
                 Text("产品：\(course.instId)")
-                    .font(.title3)
 //                    .matchedGeometryEffect(id: "title\(course.instId)", in: namespace)
                 .frame(maxWidth:.infinity, alignment:  .leading)
                 Text("收益：\(String(format: "%.2f", Float64(course.upl) ?? 0/1000))")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.upl)", in: namespace)
-                Text("收益率：\(Float64(course.uplRatio) ?? 0 * 100)%")
-                    .font(.title3)
+                Text("收益率：\((Float64(course.uplRatio) ?? 0) * 100)%")
+
 //                    .matchedGeometryEffect(id: "text\(course.uplRatio)", in: namespace)
                 Text("开仓均价：\(course.avgPx)")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.avgPx)", in: namespace)
                 Text("预估强行平价：\(course.liqPx)")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.liqPx)", in: namespace)
                 Text("持仓量：\(Float64(course.pos) ?? 0 * 10)")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.pos)", in: namespace)
                 Text("保证金余额：\(String(format: "%.2f", Float(course.margin) ?? 0/1000))")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.margin)", in: namespace)
                 Text("保证金率：\(String(format: "%.2f", Float(course.mgnRatio) ?? 0/1000))")
-                    .font(.title3)
+
 //                    .matchedGeometryEffect(id: "text\(course.mgnRatio)", in: namespace)
             }
             .padding(20)
@@ -49,9 +48,10 @@ struct CourseItem: View {
 
         .foregroundColor(.black)
         .background(Color(red: 236, green: 240, blue: 241))
-        .cornerRadius(15) 
+        .cornerRadius(15)
         .frame(height:300)
-        .padding(20)
+        .padding(.top, 20)
+        .padding(.bottom, 5)
     }
 }
 
