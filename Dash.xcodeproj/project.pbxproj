@@ -48,6 +48,7 @@
 		DBE1C45727DB433100C111F4 /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45627DB433100C111F4 /* InputStyle.swift */; };
 		DBE1C45927E0819200C111F4 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45827E0819200C111F4 /* AvatarView.swift */; };
 		DBE1C45B27E091BC00C111F4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45A27E091BC00C111F4 /* Address.swift */; };
+		DBE6DC6B27F72CB400B7ED2C /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6DC6A27F72CB400B7ED2C /* demo.swift */; };
 		DBFC174727E1DE6A00F1C05E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC174627E1DE6A00F1C05E /* Coin.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		DBE1C45627DB433100C111F4 /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
 		DBE1C45827E0819200C111F4 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		DBE1C45A27E091BC00C111F4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		DBE6DC6A27F72CB400B7ED2C /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
 		DBFC174627E1DE6A00F1C05E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				DB254E9627D851DA00398AF9 /* FeaturedItem.swift */,
 				8F1C547027D8D7530008DE67 /* CourseItem.swift */,
 				DBE1C45827E0819200C111F4 /* AvatarView.swift */,
+				DBE6DC6A27F72CB400B7ED2C /* demo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				DBE1C45B27E091BC00C111F4 /* Address.swift in Sources */,
 				DB1D00A527D6F0CB0002CC65 /* AccountView.swift in Sources */,
 				DBE1C45927E0819200C111F4 /* AvatarView.swift in Sources */,
+				DBE6DC6B27F72CB400B7ED2C /* demo.swift in Sources */,
 				DB254EA327D8958C00398AF9 /* MatchedView.swift in Sources */,
 				DB1D00AD27D75C500002CC65 /* Tab.swift in Sources */,
 				DB254E9927D8543E00398AF9 /* NavigationBar.swift in Sources */,

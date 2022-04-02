@@ -53,7 +53,7 @@ class PositionModel: ObservableObject {
     func fetchPositions() {
             // https://img.umcoder.com/api/v5/account/positions
             let url = URL(string:
-                            "https://img.umcoder.com/api/v5/account/positions")!
+                            "http://127.0.0.1:4523/mock/605385/api/v5/account/positions")!
             // 创建一个会话，这个会话可以复用
             let session = URLSession(configuration: .default)
             let UrlRequest = URLRequest(url: url)

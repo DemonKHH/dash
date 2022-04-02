@@ -24,6 +24,7 @@ struct HomeView: View {
             Color("Background").ignoresSafeArea()
 
             ScrollView {
+                scrollDetection
                 featured
                 Text("持仓信息".uppercased())
                     .font(.title3)
@@ -90,7 +91,7 @@ struct HomeView: View {
                 index, course in
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
-
+                    
                     FeaturedItem(course: course)
                         .frame(maxWidth: 500)
 //                        .frame(alignment:.center)
@@ -152,6 +153,7 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    
     static var previews: some View {
         HomeView()
             .environmentObject(Model())
