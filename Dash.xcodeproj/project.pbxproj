@@ -49,6 +49,7 @@
 		DBE1C45927E0819200C111F4 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45827E0819200C111F4 /* AvatarView.swift */; };
 		DBE1C45B27E091BC00C111F4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45A27E091BC00C111F4 /* Address.swift */; };
 		DBE6DC6B27F72CB400B7ED2C /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6DC6A27F72CB400B7ED2C /* demo.swift */; };
+		DBF2C00227F823A200436625 /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2C00127F823A200436625 /* Valuation.swift */; };
 		DBFC174727E1DE6A00F1C05E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC174627E1DE6A00F1C05E /* Coin.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		DBE1C45827E0819200C111F4 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		DBE1C45A27E091BC00C111F4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		DBE6DC6A27F72CB400B7ED2C /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
+		DBF2C00127F823A200436625 /* Valuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
 		DBFC174627E1DE6A00F1C05E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBE6F4527F47D60009BF020 /* Positions.swift */,
+				DBF2C00127F823A200436625 /* Valuation.swift */,
 			);
 			path = Okex;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				DB254E9727D851DA00398AF9 /* FeaturedItem.swift in Sources */,
 				DBE1C45127DB31AE00C111F4 /* SignUpView.swift in Sources */,
 				DBE1C45527DB371100C111F4 /* AngularButtonStyle.swift in Sources */,
+				DBF2C00227F823A200436625 /* Valuation.swift in Sources */,
 				8F1C547527D8E3240008DE67 /* Animations.swift in Sources */,
 				DB254E9B27D87E0A00398AF9 /* PreferenceKeys.swift in Sources */,
 				DBE1C45727DB433100C111F4 /* InputStyle.swift in Sources */,

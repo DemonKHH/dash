@@ -43,25 +43,21 @@ struct NavigationBar: View {
                 .sheet(isPresented: $showSearch){
                     SearchView()
                 }
-                Button {
-                    if isLogged {
-                        showAccount = true
-                    }else {
-                        withAnimation{
-                            showModel = true
-                        }
-                    }
-//
-
-
+                
+                Button{
+                    showSearch = true
                 } label: {
-                    AvatarView()
-
+                    Image(systemName: "magnifyingglass")
+                        .font(.body.weight(.bold))
+                        .frame(width: 36, height: 36)
+                        .foregroundColor(.secondary)
+                        .background(Color.blue)
+                    .strokeStyle(cornerRadius:14)
                 }
-                .sheet(isPresented: $showAccount)
-                {
-//                    AccountView()
+                .sheet(isPresented: $showSearch){
+                    SearchView()
                 }
+                
             }
             .frame(maxWidth:.infinity, alignment: .trailing)
             .padding(.trailing,20)
