@@ -53,19 +53,17 @@ class PositionModel: ObservableObject {
     func fetchPositions() {
             // https://img.umcoder.com/api/v5/account/positions
             let url = URL(string:
-                            "http://127.0.0.1:4523/mock/605385/api/v5/account/positions")!
+                            "https://img.umcoder.com/api/v5/account/positions")!
             // 创建一个会话，这个会话可以复用
             let session = URLSession(configuration: .default)
             let UrlRequest = URLRequest(url: url)
             // 创建一个网络任务
             let task = session.dataTask(with: UrlRequest) {(data, response, error) in
                 do {
-                    // 返回的是一个json，将返回的json转成字典r
-//                    let r = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                    print("解析内容")
                     let r = try JSONDecoder().decode(PositionRsp.self, from: data!)
-                    print(r.data)
-                    self.positions = r.data
+                    DispatchQueue.main.async {
+                        self.positions = r.data
+                    }
                 } catch {
                     // 如果连接失败就...
                     print("无法连接到服务器")

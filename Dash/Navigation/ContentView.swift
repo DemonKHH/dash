@@ -9,23 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var model: Model
+//    @StateObject var workersModel = WorkersModel()
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            HomeView()
-//            switch selectedTab {
-//            case .home:
-//                HomeView()
-//            case .explore:
-////                AccountView()
-//                HomeView()
-//             case .notification:
-////                AccountView()
-//                HomeView()
-//            case .library:
-////                AccountView()
-//                HomeView()
-            }
+            TabBar()
+        }
+
     }
 }
 

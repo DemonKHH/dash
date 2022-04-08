@@ -26,7 +26,7 @@ struct HomeView: View {
 
             ScrollView {
                 scrollDetection
-//                navigationBar
+                navigationBar
                 featured
                 Text("持仓信息".uppercased())
                     .font(.title3)

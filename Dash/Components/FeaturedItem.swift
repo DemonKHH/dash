@@ -18,10 +18,10 @@ struct FeaturedItem: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .lineLimit(1)
-            Text("涨幅：23%")
-                .font(.title3)
-                .fontWeight(.bold)
-                .lineLimit(1)
+//            Text("涨幅：xxx%")
+//                .font(.title3)
+//                .fontWeight(.bold)
+//                .lineLimit(1)
 
         }
         .padding(/*@START_MENU_TOKEN@*/.all, 20.0/*@END_MENU_TOKEN@*/)

@@ -1,124 +1,60 @@
-////
-////  TabBar.swift
-////  Dash
-////
-////  Created by zw on 2022/3/8.
-////
 //
-//import SwiftUI
+//  TabBar.swift
+//  Dash
 //
-//struct TabBar: View {
-//    @AppStorage("selectedTab") var selectedTab :Tab = .home
-//    @State var color :Color = .blue
-//    @State var tabItemWidth:CGFloat =  0
+//  Created by demon on 2022/3/8.
 //
-//    var body: some View {
-//        GeometryReader   { proxy in
-//            let hasHomeIndicator = proxy.safeAreaInsets.bottom > 20
-//
-//            HStack
-//            {
-//                buttons
-//            }
-//            .padding(.horizontal,8)
-//            .padding(.top,14)
-//            .frame(height: hasHomeIndicator ? 88 : 62, alignment: .top)
-////            .background(.ultraThinMaterial,in: RoundedRectangle(cornerRadius: hasHomeIndicator ? 34 : 0, style: .continuous))
-//            .background(
-//                background
-//            )
-//            .overlay(
-//                overlay
-//            )
-//            .strokeStyle(cornerRadius: 34)
-//            .frame(maxHeight:.infinity,alignment: .bottom)
-//        .ignoresSafeArea()
-//        }
-//
-//    }
-//    var buttons : some View {
-//            ForEach(tabItems) { item in
-//                Button{
-//                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)){
-//                        selectedTab = item.tab
-//                        color = item.color
-//                    }
-//
-//                } label: {
-//                    VStack(spacing:0)
-//                    {
-//                        Image(systemName: item.icon)
-////                            .symbolVariant(.fill)
-//                            .font(.body.bold())
-//                            .frame(width: 80, height: 29)
-//                        Text(item.text)
-//                            .font(.caption2)
-//                            .lineLimit(1)
-//                   }
-//                .frame(maxWidth: .infinity)
-//                }
-////                .foregroundStyle(selectedTab == item.tab ? .primary : .secondary)
-//                .blendMode(selectedTab == item.tab ? .overlay : .normal)
-//                .overlay(
-//                    GeometryReader{ proxy in
-////                        Text("\(proxy.size.width)")
-////                        tabItemWidth = proxy.size.width
-//                    Color.clear.preference(key: TabPrefenenceKey.self, value: proxy.size.width)
-//                }
-//                )
-//                .onPreferenceChange(TabPrefenenceKey.self)
-//                {
-//                    Value in
-//                    tabItemWidth = Value
-//                }
-//            }
-//
-//
-//    }
-//
-//    var background: some View {
-//        HStack {
-//
-//            if selectedTab == .library {Spacer()}
-//            if selectedTab == .explore {Spacer()}
-//            if selectedTab == .notification {Spacer()
-//                Spacer()}
-//            Circle().fill(color).frame(width: tabItemWidth)
-//            if selectedTab == .home {Spacer()}
-//            if selectedTab == .explore{Spacer()
-//                Spacer()
-//            }
-//            if selectedTab == .notification{Spacer()}
-//        }
-//        .padding(.horizontal, 8)
-//    }
-//
-//
-//    var overlay: some View{
-//        HStack {
-//
-//            if selectedTab == .library {Spacer()}
-//            if selectedTab == .explore {Spacer()}
-//            if selectedTab == .notification {Spacer()
-//                Spacer()}
-//            Rectangle().fill(color).frame(width: 28, height:5)
-//                .cornerRadius(3)
-//                .frame(width: tabItemWidth)
-//                .frame(maxHeight: .infinity ,alignment: .top)
-//            if selectedTab == .home {Spacer()}
-//            if selectedTab == .explore{Spacer()
-//                Spacer()
-//            }
-//            if selectedTab == .notification{Spacer()}
-//        }
-//        .padding(.horizontal, 8)
-//    }
-//}
-//
-//
-//struct TabBar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabBar()
-////.previewInterfaceOrientation(.portraitUpsideDown)
-//    }
-//}
+
+import SwiftUI
+
+struct TabBar: View {
+    @State private var selectedTab = 0
+    
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            PageOneUIView()
+                .onTapGesture {
+                    self.selectedTab = 1
+                }
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("message")
+                }
+                .tag(0)
+
+            PageTwoUIView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("task")
+                }
+                .tag(1)
+        }
+    }
+}
+
+struct PageOneUIView:View{
+    var body: some View{
+        VStack(alignment: .leading, content: {
+            HomeView()
+        })
+        .background(Color.orange.opacity(0.3))
+    }
+}
+
+struct PageTwoUIView: View {
+    @StateObject var workersModel = WorkersModel()
+    
+    var body: some View {
+        VStack(alignment: .leading, content: {
+            TaskListView().environmentObject(self.workersModel)
+         })
+    }
+}
+
+
+
+struct TabBar_Previews: PreviewProvider {
+    static var previews: some View {
+        TabBar()
+    }
+}
