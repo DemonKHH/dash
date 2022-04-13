@@ -53,6 +53,9 @@
 		DBE1C45927E0819200C111F4 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45827E0819200C111F4 /* AvatarView.swift */; };
 		DBE1C45B27E091BC00C111F4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1C45A27E091BC00C111F4 /* Address.swift */; };
 		DBF2C00227F823A200436625 /* Valuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2C00127F823A200436625 /* Valuation.swift */; };
+		DBF2C0042806EDEA00436625 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2C0032806EDEA00436625 /* TodoListView.swift */; };
+		DBF2C0062806EEBC00436625 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2C0052806EEBC00436625 /* TodoItemView.swift */; };
+		DBF2C0092806EF9B00436625 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2C0082806EF9B00436625 /* Todo.swift */; };
 		DBFC174727E1DE6A00F1C05E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC174627E1DE6A00F1C05E /* Coin.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +147,9 @@
 		DBE1C45827E0819200C111F4 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		DBE1C45A27E091BC00C111F4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		DBF2C00127F823A200436625 /* Valuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valuation.swift; sourceTree = "<group>"; };
+		DBF2C0032806EDEA00436625 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		DBF2C0052806EEBC00436625 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
+		DBF2C0082806EF9B00436625 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		DBFC174627E1DE6A00F1C05E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +282,7 @@
 		DB254E9227D84D8800398AF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBF2C0032806EDEA00436625 /* TodoListView.swift */,
 				5D21C7E327FDB867006A4B2E /* TaskListView.swift */,
 				5D21C7E127FC886A006A4B2E /* TasksView.swift */,
 				DB1D00A427D6F0CB0002CC65 /* AccountView.swift */,
@@ -296,6 +303,7 @@
 				DB254E9627D851DA00398AF9 /* FeaturedItem.swift */,
 				8F1C547027D8D7530008DE67 /* CourseItem.swift */,
 				DBE1C45827E0819200C111F4 /* AvatarView.swift */,
+				DBF2C0052806EEBC00436625 /* TodoItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 		DB254E9427D84E1B00398AF9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBF2C0072806EF7800436625 /* Custom */,
 				DBBE6F4427F47D47009BF020 /* Okex */,
 				DB1D00AC27D75C500002CC65 /* Tab.swift */,
 				DB254E9A27D87E0A00398AF9 /* PreferenceKeys.swift */,
@@ -355,6 +364,14 @@
 				DBBE6F5727F5A6BC009BF020 /* Info.plist */,
 			);
 			path = DashWidgets;
+			sourceTree = "<group>";
+		};
+		DBF2C0072806EF7800436625 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DBF2C0082806EF9B00436625 /* Todo.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +552,7 @@
 				DB254E9927D8543E00398AF9 /* NavigationBar.swift in Sources */,
 				DB1D00A927D737570002CC65 /* BlobView.swift in Sources */,
 				DB254E6627D5E4B500398AF9 /* ContentView.swift in Sources */,
+				DBF2C0042806EDEA00436625 /* TodoListView.swift in Sources */,
 				5D21C7E927FDC897006A4B2E /* Http.swift in Sources */,
 				8FC1DCC727DF647A00F1C7DB /* SignInView.swift in Sources */,
 				DBFC174727E1DE6A00F1C05E /* Coin.swift in Sources */,
@@ -546,6 +564,7 @@
 				DBE1C45527DB371100C111F4 /* AngularButtonStyle.swift in Sources */,
 				DBF2C00227F823A200436625 /* Valuation.swift in Sources */,
 				8F1C547527D8E3240008DE67 /* Animations.swift in Sources */,
+				DBF2C0062806EEBC00436625 /* TodoItemView.swift in Sources */,
 				DB254E9B27D87E0A00398AF9 /* PreferenceKeys.swift in Sources */,
 				DBE1C45727DB433100C111F4 /* InputStyle.swift in Sources */,
 				DB254EA527D9E46F00398AF9 /* Model.swift in Sources */,
@@ -553,6 +572,7 @@
 				DB1D00AB27D755680002CC65 /* TabBar.swift in Sources */,
 				DB254E9D27D8848B00398AF9 /* AnimatableFontModifier.swift in Sources */,
 				DBBE6F4627F47D60009BF020 /* Positions.swift in Sources */,
+				DBF2C0092806EF9B00436625 /* Todo.swift in Sources */,
 				8FC1DCC527DF639300F1C7DB /* ModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
