@@ -9,9 +9,26 @@
 import SwiftUI
 
 struct TodoItemView: View {
-    var todo: Todo
+    @State var todo: Todo
     var body: some View {
-        Text("text \(todo.id)")
+            NavigationLink(
+                destination: RecordListView(todo: self.todo), label: {
+                    HStack{
+                        VStack(alignment: .leading){
+                            Text("name \(self.todo.name)")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                        }
+                        .padding()
+                        Spacer()
+                    }
+                    .frame(height: 120)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(25)
+                    .padding()
+                }
+            )
     }
 }
 

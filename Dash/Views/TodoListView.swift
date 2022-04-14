@@ -10,8 +10,14 @@ import SwiftUI
 struct TodoListView: View {
     @EnvironmentObject var todoModel: TodoModel
     var body: some View {
-        ForEach(todoModel.todos, id: \.self) { todo in
-            TodoItemView(todo: todo)
+        ScrollView{
+            HStack(alignment: .top){
+                VStack(alignment: .leading){
+                    ForEach(todoModel.todos, id: \.self) { todo in
+                        TodoItemView(todo: todo)
+                    }
+                }
+            }
         }
     }
 }

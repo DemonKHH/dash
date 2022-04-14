@@ -12,9 +12,11 @@ struct ContentView: View {
 //    @StateObject var workersModel = WorkersModel()
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            TabBar()
-        }
+        
+            ZStack(alignment: .bottom) {
+                TabBar()
+    //
+            }
 
     }
 }

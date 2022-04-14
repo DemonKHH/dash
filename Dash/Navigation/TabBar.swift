@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = 2
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -28,6 +28,13 @@ struct TabBar: View {
                     Text("task")
                 }
                 .tag(1)
+            
+            PageThreeUIView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("todo")
+                }
+                .tag(2)
         }
     }
 }
@@ -48,6 +55,28 @@ struct PageTwoUIView: View {
         VStack(alignment: .leading, content: {
             TaskListView().environmentObject(self.workersModel)
          })
+    }
+}
+
+struct PageThreeUIView: View {
+    var body: some View {
+        NavigationView{
+            VStack(alignment: .leading, content: {
+                HStack(alignment: .lastTextBaseline){
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            
+                    }
+                }
+                .padding(.trailing)
+                TodoListView().environmentObject(TodoModel())
+             }).navigationTitle(Text("Todo"))
+        }
     }
 }
 
